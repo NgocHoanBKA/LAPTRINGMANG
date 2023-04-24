@@ -55,35 +55,6 @@ int main(int argc, char *argv[])
     int client = accept(listener, (struct sockaddr *)&clientAddr, &clientAddrLen);
     printf("Client IP: %s:%d\n", inet_ntoa(clientAddr.sin_addr), ntohs(clientAddr.sin_port));
 
-    // char *msg = "Hello client\n";
-    // send(client, msg, strlen(msg), 0);
-    // Send greeting to client
-    // FILE *hello_file = fopen(argv[2], "r");
-    // char buffer[BUFFER_SIZE];
-    // int bytes_read = 0;
-    // while ((bytes_read = fread(buffer, 1, BUFFER_SIZE, hello_file)) > 0) {
-    //     if (send(client, buffer, bytes_read, 0) < 0) {
-    //         perror("Failed to send greeting to client");
-    //         exit(EXIT_FAILURE);
-    //     }
-    // }
-    // fclose(hello_file);
-
-    // while (1)
-    // {
-    //     int ret = recv(client, buf, sizeof(buf), 0);
-    //     if (ret <= 0)
-    //     {
-    //         printf("Ket noi bi dong.\n");
-    //         break;
-    //     }
-    //     if (ret < sizeof(buf))
-    //         buf[ret] = 0;
-
-    //     printf("%d bytes received\n", ret);
-    //     printf("%s\n", buf);
-    // }
-    // Receive data from client and write to file
     while (1)
     {
         // Get client IP address
